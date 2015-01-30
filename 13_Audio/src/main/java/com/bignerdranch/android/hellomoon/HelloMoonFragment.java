@@ -37,9 +37,9 @@ public class HelloMoonFragment extends Fragment {
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_hello_moon, parent, false);
+        View v = inflater.inflate(R.layout.fragment_hello_moon_audio, parent, false);
 
-        mPlayButton = (Button)v.findViewById(R.id.hellomoon_playButton);
+        mPlayButton = (Button)v.findViewById(R.id.hellomoon_audioplayButton);
         mStopButton = (Button)v.findViewById(R.id.hellomoon_stopButton);
                 
         mPlayButton.setOnClickListener(new View.OnClickListener() {

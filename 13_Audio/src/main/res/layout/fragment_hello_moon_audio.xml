@@ -15,16 +15,22 @@
     android:gravity="center|bottom"
     android:layout_weight="0"
     >
-    <Button android:id="@+id/hellomoon_playButton"
+    <Button android:id="@+id/hellomoon_audioPlayButton"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/hellomoon_play" 
       />
     
-    <Button android:id="@+id/hellomoon_stopButton"
+    <Button android:id="@+id/hellomoon_aduioStopButton"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/hellomoon_stop"
+      />
+
+     <Button android:id="@+id/hellomoon_VedioButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/hellomoon_vedio"
       />
    </TableRow>
 
