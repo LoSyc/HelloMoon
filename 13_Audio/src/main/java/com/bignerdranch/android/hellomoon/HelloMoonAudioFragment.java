@@ -48,6 +48,16 @@ public class HelloMoonAudioFragment extends Fragment {
         mStopButton = (Button)v.findViewById(R.id.hellomoon_aduioStopButton);
         mVedioButton = (Button) v.findViewById(R.id.hellomoon_VedioButton);
 
+        if (flag == NEXTPLAY) {
+            mPlayButton.append("Play");
+        }
+        if (flag == NEXTPAUSE) {
+            mPlayButton.append("Pause");
+        }
+        if (flag == NEXTRESUMES) {
+            mPlayButton.append("Resume");
+        }
+
         mPlayButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (flag == NEXTPLAY) {
@@ -82,11 +92,12 @@ public class HelloMoonAudioFragment extends Fragment {
         mVedioButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i(TAG, "isPausing");
-                if (flag != NEXTPLAY && flag != NEXTRESUMES) {
+                if (mPlayer != null && flag != NEXTPLAY && flag != NEXTRESUMES) {
                     mPlayer.PauseAndResumes(getActivity());
                     flag = NEXTRESUMES;
                     mPlayButton.setText("Resume");
                 }
+                setRetainInstance(true);
                 Fragment fragment = new HelloMoonVedioFragment();
                 fm.beginTransaction().replace(R.id.helloMoonFragment, fragment).addToBackStack(null).commit();
             }
