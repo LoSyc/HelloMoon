@@ -82,7 +82,7 @@ public class HelloMoonAudioFragment extends Fragment {
         mVedioButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i(TAG, "isPausing");
-                if (flag != NEXTPLAY) {
+                if (flag != NEXTPLAY && flag != NEXTRESUMES) {
                     mPlayer.PauseAndResumes(getActivity());
                     flag = NEXTRESUMES;
                     mPlayButton.setText("Resume");
